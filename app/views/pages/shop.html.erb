@@ -1,0 +1,42 @@
+
+<br>
+<br>
+<br>
+<br>
+<br> 
+<div class="background-div">
+      <BR>Cursos<BR><BR>
+   </div>  
+<div class="container">
+  
+	<section class="product-list">
+		<div class="container">
+			<% @cursos.order("RAND()").each do |curso| %>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="product">
+							<div class="row">
+								<div class="col-md-6 col-xs-12">
+									<div class="thumbnail">
+										<%= image_tag curso.image %>	
+									</div>
+								</div>
+								<div class="col-md-5 col-md-offset-1">
+									<div class="product-details">
+										<h2 class="product-title" ><%= curso.titulo %></h2>
+										<div style="margin-right: 14px;">
+										<p style="text-align: justify;">
+											<%= truncate(curso.descripccion, length: 172) %>
+											<%= link_to 'Ver más información.', infocurso_path(curso_id: curso)%>
+										</p></div>
+									</div>
+								</div>
+							</div><!-- /.row -->
+						</div><!-- /.product -->
+					</div>
+				</div><!-- /.row -->
+			<% end %>
+			<%= paginate @cursos %>
+		</div>
+	</section>
+</div>

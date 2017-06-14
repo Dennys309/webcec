@@ -1,0 +1,131 @@
+
+<!-- Off screen navigation -->
+    <div id="sidr">
+		<ul>	
+			<li>
+			  <%= link_to '#', class: "side-logo" do %>
+			    CEC
+		    <% end %>
+			</li>
+			<li class="active"><%= link_to 'Home', root_path %></li>
+			<li class="active"><%= link_to 'Programas', programa_path %></li>
+			<li class="active"><%= link_to 'Cursos', curso_path %></li>
+			<li class="active"><%= link_to 'Corporativas', capacitaciones_path %></li>
+			<li class="active"><%= link_to 'Conferencias', conferencia_path %></li>
+			<li class="active"><%= link_to 'Agenda', calendario_path %></li>
+			
+		</ul>
+
+			<div class="side-social-menu-der">
+				<a href="#"><i class="face fa-facebook"></i></a>
+				<a href="#"><i class="face fa-twitter"></i></a>
+				<a href="#"><i class="face fa-linkedin"></i></a>
+			</div>
+		</div>
+		
+
+		
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+
+						<a class="navbar-brand"><%= image_tag("logo3.png", class: "img-responsive") %><span class="logo-dot accent-bg"></span></a>
+
+						<!--<a class="navbar-brand" href="index.html">CEC Espol<span class="logo-dot accent-bg"></span></a>-->
+						
+						<a href="#sidr" class="side-menu-opener mobile">
+							<div class="bars">
+						        <span class="bar top"></span>
+						        <span class="bar middle"></span>
+						        <span class="bar bottom"></span>
+						    </div>
+						</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="collapse-navigation">
+						<ul class="nav navbar-nav">
+
+							<li>
+							<%= link_to  root_path do %>
+							<i class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"></i> HOME </a>
+							<% end %>
+							</li>
+
+							<!--<li><%= link_to 'Nosotros', conocenos_path %></li>-->
+
+							<li class="dropdown">
+								<a href="./catalog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Nosotros <span class="fa fa-angle-down"></span></a>
+								<ul class="dropdown-menu">
+									<li><%= link_to 'Conócenos', conocenos_path %></li>
+									<li><%= link_to 'Nuestras Sedes', sedes_path %></li>
+									<li><%= link_to 'Nuestra Identidad', identidad_path %></li>
+								</ul>
+							</li>
+
+
+							<!--<li><%= link_to 'Cursos', curso_path %></li>-->
+							<li class="dropdown">
+							    <a href="./catalog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Servicios <span class="fa fa-angle-down"></span></a>
+							    <ul class="dropdown-menu">
+							      
+							      	<li><%= link_to 'Programas', programa_path %></li>
+							      	<li><%= link_to 'Cursos', curso_path %></li>
+							      	<li><%= link_to 'Capacitaciones Corporativas', capacitaciones_path %></li>
+							      	<li><%= link_to 'Conferencias', conferencia_path %></li>
+							      	<li><%= link_to 'Agenda de Eventos', calendario_path %></li>      	
+							    </ul>
+							</li>
+
+							<li><%= link_to 'Clientes', cliente_path %></li>
+						<li>
+							<%= link_to  contactenos_path do %>
+							<i class="fa fa-paper-plane"></i> Contáctenos</a>
+							<% end %>
+						</li>
+
+						<li>
+							<% if @lista.nil? %>
+
+								<a href="#" class="menu-cart"><i class="fa fa-shopping-cart"></i> $0.00</a>
+							<% end %>
+							<% else %>
+									<%= link_to  @lista,  class: 'menu-cart'  do %>
+									<class="menu-cart"> <i class="fa fa-shopping-cart"></i>
+									<%= number_to_currency  @lista.total_precio  %>
+								<% end %>
+						</li>		
+
+					</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href='index' class="side-menu-opener">
+									<div class="bars">
+								        <span class="bar top"></span>
+								        <span class="bar middle"></span>
+								        <span class="bar bottom"></span>
+								    </div>
+								</a>
+						  </li>
+			</ul>
+
+			<div class="side-social-header hidden-md hidden-sm" align="right">
+				
+				<a href="https://www.facebook.com/cecespolec/"  target="_blank"><i class="face1 fa-facebook"></i></a>
+				<a href="https://twitter.com/cecespol" target="_blank"><i class="face1 fa-twitter"></i></a>
+				<!--<a href="#"><i class="fa fa-google-plus"></i></a>
+				<a href="#"><i class="fa fa-pinterest"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>-->
+				<a href="https://ec.linkedin.com/in/educonespol" target="_blank"><i class="face1 fa-linkedin"></i></a>
+			</div>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container -->
+			</nav>
+
+
+
+
+
+						

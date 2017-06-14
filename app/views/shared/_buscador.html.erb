@@ -1,0 +1,8 @@
+<%= form_tag root_path, method: :get do %>
+<p>
+<%= render 'shared/message' %>
+    <%= text_field_tag( :search, value = nil , options = {:size => "300", :placeholder => "Buscar Cursos o Eventos (Excel, Microsoft, Project)", :class => "form-validate" }) %>
+      <%= submit_tag "Buscar", curso: nil %>
+  </p>
+<% end %>
+<!--Fin de Buscador-->

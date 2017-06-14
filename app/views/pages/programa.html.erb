@@ -1,0 +1,40 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="background-div">
+    <BR>Programas<BR><BR>
+</div> 
+<div class="container"> 
+	<section class="product-list">
+		<div class="container">
+			<% @programas.order("RAND()").each do |programa| %>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="product">
+							<div class="row">
+								<div class="col-md-6 col-xs-12">
+									<div class="thumbnail">
+										<%= image_tag programa.imagen %>	
+									</div>
+								</div>
+								<div class="col-md-5 col-md-offset-1">
+									<div class="product-details">
+										<h2 class="product-title" ><%= programa.titulo %></h2>
+										<div style="margin-right: 14px;">
+										<p style="text-align: justify;">
+											<%= truncate(programa.descripcion, length: 180) %>
+											<%= link_to 'Ver más información.', infoprograma_path(programa_id: programa)%>
+										</p></div>
+									</div>
+								</div>
+							</div><!-- /.row -->
+						</div><!-- /.product -->
+					</div>
+				</div><!-- /.row -->
+			<% end %>
+			<%= paginate @programas %>
+		</div>
+	</section>
+</div>

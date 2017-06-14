@@ -1,0 +1,70 @@
+<!-- PROGRAMAS -->
+<BR> 
+
+<div class="background-div">
+    <Br>Programas</Br><br>
+</div>  
+			<section class="products-grid">
+				<div class="container">
+					<div class="row products-container">
+					<% @count = 0 %>
+					<% @programas.order("RAND()").each do |programa| %>
+						<%if @count < 3 %>
+							<% @count = @count + 1 %>  
+							<div class="col-md-4 col-sm-6 col-xs-12 product">
+								<div class="thumbnail" style="background-image: url('/assets/products/<%= programa.imagen_file_name %>');">
+								<%= image_tag programa.imagen %>
+								<div class="product-details text-center">
+										<div class="align-vertical">
+											<h3><%= programa.titulo %></h3>
+											<%= link_to  infoprograma_path(programa_id: programa), class: "btn btn-primary"  do %>
+			  								<i class="fa fa-shopping-cart"></i> Más información
+			  								<% end %>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						<% else %>
+						<% break %>
+						 <% end %>
+					 <% end %>
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+				<a href="programa" class="glyphicon-vermas glyphicon-arrow-right">Más Programas</a>
+			</section>
+<!-- CURSOS -->
+<div class="background-div">
+            <BR>Cursos
+        </div>  
+<section class="products-grid">
+				<div class="container">
+					<div class="row products-container">
+					<% @count = 0 %>
+					<% @cursos.order("RAND()").each do |curso| %>
+					<%if @count < 3 %>
+							<% @count = @count + 1 %>  
+						<div class="col-md-4 col-sm-6 col-xs-12 product">
+							<div class="thumbnail" style="background-image: url('/assets/products/<%= curso.image_file_name %>');">
+							<%= image_tag curso.image %>
+								<div class="product-details text-center">
+									<div class="align-vertical">
+										<h3><%= curso.titulo %></h3>
+										<%= link_to  infocurso_path(curso_id: curso), class: "btn btn-primary"  do %>
+		  								<i class="fa fa-shopping-cart"></i> Más información
+		  								<% end %>
+									</div>
+								</div>
+							</div>
+						</div>
+					<% else %>
+						<% break %>
+						 <% end %>
+					 <% end %>
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</section>
+
+			
+			
+			

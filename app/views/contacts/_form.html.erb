@@ -1,0 +1,34 @@
+<br>
+<br>
+
+<%= form_for @contact do |f| %>
+	<%= render 'shared/contact_errors' %>
+
+	<form class="row-form">
+	  <div class="col-md-1 col-md-12">
+	  <br><br>
+	    <div class="col-md-1 col-md-12">
+        <span>
+          <%= f.text_field :name, class: 'form-name validate slide-up-contact', placeholder:'Nombre' %>
+          <%= f.label :Nombre %>
+        </span>
+       </div>
+       <br><br><br><br>
+		<div class="col-md-1 col-md-12">
+        <span>
+          <%= f.email_field :email, class: 'form-email validate slide-up-contact', placeholder:'Correo Electronico' %>
+          <%= f.label :'Corrreo Electronico' %>
+        </span>
+       </div>
+       <br><br><br><br>
+       <div class="col-md-1 col-md-12">
+        <span>
+         <%= f.text_area :message, class: 'form-message validate slide-up-contact', placeholder:'Mensaje' %>
+         <%= f.label :Mensaje %>
+        </span>
+       </div>
+		<div>
+			<center><%= f.submit 'enviar', class: 'btn-form' %></center>
+		</div>
+	</form>
+<% end %>

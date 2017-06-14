@@ -1,0 +1,45 @@
+/* Eventos Style */
+.agenda-evento { width: 1000px; font-size: 18px; margin-left: 10px;  }
+.agenda-table1{ width: 400px; border: purple 1px solid;}
+.agenda-th1{ width: 500px; text-align: center; font-size: 29px;  border: purple 1px; }
+.agenda-evento-date .agenda-evento-dayofmonth {
+  width: 30px;
+  font-size: 40px;
+  line-height: 40px;
+  float: left;
+  text-align: left;
+  margin-left: 50px; 
+  vertical-align: middle;
+}
+.agenda-evento .agenda-evento-date .agenda-evento-dayofweek {
+  font-size: 1.00em; 
+  text-align: center;
+  margin-left: 110px; 
+  vertical-align: middle;
+}
+.table-th1{ text-align: center; font-size: 18px; }
+
+.agenda-evento .agendadateventos .dayofweekeventos {
+  font-size: 1.00em; 
+  text-align: left;
+  margin-left: 50px;
+}
+.agenda-evento .agendadateventos .shortdateeventos {
+  font-size: 0.75em; 
+  text-align: left;
+  margin-left: 50px; 
+}
+.agenda-evento .agendadateventos .dayofmontheventos {
+  width: 50px;
+  font-size: 36px;
+  line-height: 36px;
+  float: left;
+  text-align: right;
+  margin-left: 10px; 
+  margin-right: 20px; 
+}
+.agenda-evento .agendadateventos .diaventos {
+  font-size: 0.75em; 
+  text-align: left;
+  margin-left: 50px;
+}
